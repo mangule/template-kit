@@ -8,6 +8,8 @@ use App\Livewire\Role\Create;
 use App\Livewire\Role\Edit;
 use App\Livewire\Role\Index;
 use App\Livewire\Users\Listing;
+use App\Livewire\Users\UserCrudForm;
+use App\Livewire\Users\UserCrudTable;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,6 +27,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
 
     Route::livewire('users', Listing::class)->name('users');
+
+    Route::get('users/manage', UserCrudTable::class)->name('users.manage');
+    Route::get('users/manage/{mode}/{id?}', UserCrudForm::class)->name('users.manage.form');
 
     Route::get('/roles', Index::class)
     ->middleware('can:manage.roles')
