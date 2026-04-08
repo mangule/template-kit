@@ -13,7 +13,7 @@ use App\Livewire\Users\UserCrudTable;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('siice-stitch');
 });
 
 // Demo1 routes
