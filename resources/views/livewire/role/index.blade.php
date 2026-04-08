@@ -1,4 +1,4 @@
-<div class="space-y-6">
+<div class="space-y-6 kt-container-fluid">
 
     <!-- Container -->
     <div class="kt-container-fluid">
@@ -51,7 +51,7 @@
                             @endforeach
                         </select>
                     </div>
- 
+
                 </div>
                 <div class="kt-card-content">
                     <div class="grid" data-kt-datatable="true" data-kt-datatable-page-size="10"
@@ -65,7 +65,7 @@
                                                 type="checkbox">
                                             </input>
                                         </th>
-                                        <th class="min-w-[300px]">
+                                        <th class="min-w-[200px]">
                                             <span class="kt-table-col">
                                                 <span class="kt-table-col-label">
                                                     Name
